@@ -81,3 +81,11 @@ jobs:
             --set-env-vars="NODE_ENV=${ENVIRONMENT}" \
             --service-account="${REPO_NAME}-runtime@${PROJECT_ID}.iam.gserviceaccount.com" \
             --quiet
+
+      - name: Allow public access
+        run: |
+          gcloud run services add-iam-policy-binding "${REPO_NAME}" \
+            --region "${REGION}" \
+            --member="allUsers" \
+            --role="roles/run.invoker" \
+            --quiet
