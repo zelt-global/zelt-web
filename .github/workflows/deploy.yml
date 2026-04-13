@@ -1,0 +1,100 @@
+name: Build and Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+      - hml
+      - dev
+
+jobs:
+  build-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    env:
+      REPO_NAME: ${{ github.event.repository.name }}
+      REGION: ${{ vars.REGION }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Resolve environment-specific variables
+        run: |
+          case "${{ github.ref_name }}" in
+            main)
+              echo "ENV_SUFFIX=prod"        >> $GITHUB_ENV
+              echo "ENVIRONMENT=production" >> $GITHUB_ENV
+              ;;
+            hml)
+              echo "ENV_SUFFIX=hml"         >> $GITHUB_ENV
+              echo "ENVIRONMENT=staging"    >> $GITHUB_ENV
+              ;;
+            *)
+              echo "ENV_SUFFIX=dev"         >> $GITHUB_ENV
+              echo "ENVIRONMENT=development" >> $GITHUB_ENV
+              ;;
+          esac
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: >-
+            ${{
+              github.ref_name == 'main' && secrets.SERVICE_ACCOUNT_PROD ||
+              github.ref_name == 'hml'  && secrets.SERVICE_ACCOUNT_HML  ||
+              secrets.SERVICE_ACCOUNT_DEV
+            }}
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Fetch project ID
+        run: |
+          PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
+          echo "PROJECT_ID=$PROJECT_ID" >> $GITHUB_ENV
+
+      - name: Set image URL
+        run: |
+          echo "FULL_REGISTRY_URL=${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${REPO_NAME}:${GITHUB_SHA}" >> $GITHUB_ENV
+
+      - name: Docker auth
+        run: gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet
+
+      - name: Ensure Artifact Registry repo exists
+        run: |
+          set -e
+          if ! gcloud artifacts repositories describe "${REPO_NAME}" \
+            --location="${REGION}" \
+            --project="${PROJECT_ID}" >/dev/null 2>&1; then
+            gcloud artifacts repositories create "${REPO_NAME}" \
+              --repository-format=docker \
+              --location="${REGION}" \
+              --project="${PROJECT_ID}" \
+              --description="Docker images for ${REPO_NAME}"
+          fi
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t "$FULL_REGISTRY_URL" .
+          docker push "$FULL_REGISTRY_URL"
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy "${REPO_NAME}" \
+            --region "${REGION}" \
+            --image "$FULL_REGISTRY_URL" \
+            --platform managed \
+            --allow-unauthenticated \
+            --set-env-vars="NODE_ENV=${ENVIRONMENT}" \
+            --service-account="frontend-runtime@${PROJECT_ID}.iam.gserviceaccount.com" \
+            --quiet
+
+      - name: Allow public access
+        run: |
+          gcloud run services add-iam-policy-binding "${REPO_NAME}" \
+            --region "${REGION}" \
+            --member="allUsers" \
+            --role="roles/run.invoker" \
+            --quiet
