@@ -29,19 +29,19 @@ jobs:
         run: |
           case "${{ github.ref_name }}" in
             main)
-              echo "environment=production"                            >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_PROD }}"       >> $GITHUB_OUTPUT
-              echo "project_id=${{ vars.PROJECT_ID_PROD }}"           >> $GITHUB_OUTPUT
+              echo "environment=production"                                                                                                    >> $GITHUB_OUTPUT
+              echo "wif_provider=projects/664741318247/locations/global/workloadIdentityPools/github-pool/providers/github-provider"           >> $GITHUB_OUTPUT
+              echo "project_id=zelt-prod"                                                                                                     >> $GITHUB_OUTPUT
               ;;
             hml)
-              echo "environment=staging"                              >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_HML }}"       >> $GITHUB_OUTPUT
-              echo "project_id=${{ vars.PROJECT_ID_HML }}"           >> $GITHUB_OUTPUT
+              echo "environment=staging"                                                                                                       >> $GITHUB_OUTPUT
+              echo "wif_provider=projects/1071534602697/locations/global/workloadIdentityPools/github-pool/providers/github-provider"          >> $GITHUB_OUTPUT
+              echo "project_id=zelt-hml"                                                                                                      >> $GITHUB_OUTPUT
               ;;
             *)
-              echo "environment=development"                          >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_DEV }}"       >> $GITHUB_OUTPUT
-              echo "project_id=${{ vars.PROJECT_ID_DEV }}"           >> $GITHUB_OUTPUT
+              echo "environment=development"                                                                                                   >> $GITHUB_OUTPUT
+              echo "wif_provider=projects/340444923394/locations/global/workloadIdentityPools/github-pool/providers/github-provider"           >> $GITHUB_OUTPUT
+              echo "project_id=zelt-develop"                                                                                                  >> $GITHUB_OUTPUT
               ;;
           esac
 
