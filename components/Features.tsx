@@ -2,9 +2,9 @@
 
 import { useTranslations } from "next-intl";
 
-const ICONS = ["💳", "🔐", "⚡", "📱", "🌎", "🔗"];
-const ACCENTS = ["#3b82f6", "#06b6d4", "#8b5cf6", "#10b981", "#f59e0b", "#ef4444"];
-const SPANS = ["md:col-span-2", "", "", "", "", ""];
+const ICONS = ["💳", "🔐", "📱", "🌎", "🔗"];
+const ACCENTS = ["#3b82f6", "#06b6d4", "#10b981", "#f59e0b", "#ef4444"];
+const SPANS = ["md:col-span-2", "", "", "", ""];
 
 export default function Features() {
   const t = useTranslations("features");

@@ -24,14 +24,6 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 w-full py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left */}
         <div>
-          <div
-            className="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-8"
-            style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.25)", color: "#93c5fd" }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#3b82f6" }} />
-            {t("badge")}
-          </div>
-
           <h1 className="reveal-delay-1 text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
             {t("headline1")}{" "}
             <span className="gradient-text">{t("headline2")}</span>

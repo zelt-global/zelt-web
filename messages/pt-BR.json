@@ -9,10 +9,9 @@
     "bookDemo": "Agendar Demo →"
   },
   "hero": {
-    "badge": "Visa Principal Issuer · Puerto Rico",
     "headline1": "Infraestrutura de cartões para a",
     "headline2": "economia de stablecoins",
-    "subtext": "Lance seu programa de cartão cripto em 90 dias. A Zelt é uma Visa Principal Issuer oferecendo Card-as-a-Service lastreado em USDC e USDT — KYC gerenciado, API-first, pronto para a LATAM.",
+    "subtext": "Lance seu programa de cartão cripto em 90 dias. A Zelt oferece Card-as-a-Service lastreado em USDC e USDT — KYC gerenciado, API-first, pronto para a LATAM.",
     "cta_demo": "Agendar Demo →",
     "cta_how": "Como Funciona",
     "stat_acceptance_value": "~95%",
@@ -23,15 +22,15 @@
     "stat_countries_label": "Países",
     "card_holder": "SATOSHI N.",
     "card_virtual": "CARTÃO VIRTUAL",
-    "badge_usdc": "Liquidação em USDC",
+    "badge_usdc": "Liquidação USDC / USDT",
     "badge_usdc_sub": "Instantâneo · Circle",
     "badge_tx": "R$ 2.450,00 aprovado",
     "badge_tx_sub": "Amazon · 0,3s"
   },
   "networks": {
-    "title": "REDES E STABLECOINS SUPORTADAS",
-    "soon": "Em breve",
-    "partners_label": "TECNOLOGIA"
+    "networks_label": "REDES SUPORTADAS",
+    "stablecoins_label": "STABLECOINS",
+    "soon": "Em breve"
   },
   "howItWorks": {
     "label": "COMO FUNCIONA",
@@ -45,7 +44,7 @@
       },
       {
         "title": "Configure seu programa",
-        "desc": "Defina limites de gastos, escolha cartões virtuais ou físicos, ative Apple Pay / Google Pay e configure seu colateral. Controle total via dashboard ou API."
+        "desc": "Defina limites de gastos, escolha cartões virtuais ou físicos, ative Apple Pay / Google Pay. Controle total via dashboard ou API."
       },
       {
         "title": "Onboard seus usuários",
@@ -64,15 +63,11 @@
     "items": [
       {
         "title": "Cartões Virtuais e Físicos",
-        "desc": "Emita cartões Visa virtuais instantaneamente via API. Cartões físicos enviados globalmente pela Thales / IDEMIA com marca personalizada."
+        "desc": "Emita cartões Visa virtuais instantaneamente via API. Cartões físicos enviados globalmente com marca personalizada."
       },
       {
         "title": "KYC/AML Gerenciado",
         "desc": "Stack de compliance completo incluso — KYC Sumsub, monitoramento on-chain Chainalysis e screening OFAC. Delegue ou self-serve."
-      },
-      {
-        "title": "Liquidação Instantânea",
-        "desc": "USDC queimado via Circle no ponto de venda. USDT via OTC institucional. Liquidação no mesmo dia, sem float necessário da sua parte."
       },
       {
         "title": "Apple Pay e Google Pay",
@@ -80,7 +75,7 @@
       },
       {
         "title": "Infraestrutura LATAM-First",
-        "desc": "Principal Membership em Puerto Rico garante acesso direto à rede americana. Rails PIX (BRL), SPEI (MXN) e ACH integrados."
+        "desc": "Rails PIX (BRL), SPEI (MXN) e ACH integrados. Cobertura LATAM completa desde o primeiro dia."
       },
       {
         "title": "API Completa + Webhooks",
@@ -221,9 +216,9 @@
     "success_text": "Nossa equipe entrará em contato em até 24 horas com o acesso ao sandbox e um link para reunião."
   },
   "footer": {
-    "tagline": "Infraestrutura de cartões para a economia de stablecoins. Visa Principal Issuer, Puerto Rico. LATAM-first.",
-    "copyright": "© 2026 Zelt Inc. Todos os direitos reservados. Registrado em Delaware. Operado em Puerto Rico.",
-    "disclaimer": "MSB registrado no FinCEN · Solicitante IFE (OCIF Puerto Rico) · Aplicação Visa Principal Member em andamento",
+    "tagline": "Infraestrutura de cartões para a economia de stablecoins. LATAM-first.",
+    "copyright": "© 2026 Zelt Inc. Todos os direitos reservados. Registrado em Delaware.",
+    "disclaimer": "MSB registrado no FinCEN · Solicitante IFE (OCIF)",
     "sections": {
       "product": "Produto",
       "company": "Empresa",
