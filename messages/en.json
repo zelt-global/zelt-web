@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "howItWorks": "How It Works",
+    "features": "Features",
+    "ramp": "Ramp",
+    "api": "API",
+    "pricing": "Pricing",
+    "logIn": "Log In",
+    "bookDemo": "Book a Demo →"
+  },
+  "hero": {
+    "badge": "Visa Principal Issuer · Puerto Rico",
+    "headline1": "Card infrastructure for the",
+    "headline2": "stablecoin economy",
+    "subtext": "Launch your own crypto card program in 90 days. Zelt is a Visa Principal Issuer offering Card-as-a-Service backed by USDC and USDT — KYC managed, API-first, LATAM-ready.",
+    "cta_demo": "Book a Demo →",
+    "cta_how": "How It Works",
+    "stat_acceptance_value": "~95%",
+    "stat_acceptance_label": "Acceptance rate",
+    "stat_launch_value": "90 days",
+    "stat_launch_label": "Time to launch",
+    "stat_countries_value": "150+",
+    "stat_countries_label": "Countries",
+    "card_holder": "SATOSHI N.",
+    "card_virtual": "VIRTUAL CARD",
+    "badge_usdc": "USDC Settlement",
+    "badge_usdc_sub": "Instant · Circle",
+    "badge_tx": "$2,450.00 approved",
+    "badge_tx_sub": "Amazon · 0.3s"
+  },
+  "networks": {
+    "title": "SUPPORTED NETWORKS & STABLECOINS",
+    "soon": "Soon",
+    "partners_label": "POWERED BY"
+  },
+  "howItWorks": {
+    "label": "HOW IT WORKS",
+    "title1": "Launch in",
+    "title2": "four steps",
+    "subtitle": "From application to first card issued — typically 90 days, including Visa certification.",
+    "steps": [
+      {
+        "title": "Apply & Integrate",
+        "desc": "Submit your company profile. Our compliance team runs KYB and onboards you in days — not months. API keys delivered instantly."
+      },
+      {
+        "title": "Configure your program",
+        "desc": "Set spending limits, choose virtual or physical cards, enable Apple Pay / Google Pay, and define your collateral. Full control via dashboard or API."
+      },
+      {
+        "title": "Onboard your users",
+        "desc": "Use our KYC-as-a-Service (powered by Sumsub) or delegate to your own KYC provider. Issue cards in seconds via a single API call."
+      },
+      {
+        "title": "Go live & scale",
+        "desc": "Cards accepted in 150+ countries. Stablecoin balance auto-converts at point of sale. Real-time webhooks, transaction monitoring, and chargeback management included."
+      }
+    ]
+  },
+  "features": {
+    "label": "FEATURES",
+    "title1": "Everything your card program",
+    "title2": "needs to scale",
+    "items": [
+      {
+        "title": "Virtual & Physical Cards",
+        "desc": "Issue Visa virtual cards instantly via API. Physical cards shipped globally through Thales / IDEMIA with custom branding."
+      },
+      {
+        "title": "KYC/AML Managed",
+        "desc": "Full compliance stack included — Sumsub KYC, Chainalysis on-chain monitoring, and OFAC screening. Delegate or self-serve."
+      },
+      {
+        "title": "Instant Settlement",
+        "desc": "USDC burns via Circle at point of sale. USDT via institutional OTC. Settlement lands same day, no float required from you."
+      },
+      {
+        "title": "Apple Pay & Google Pay",
+        "desc": "Tokenization via Thredd — your cardholders tap to pay worldwide from day one. No extra integration work needed."
+      },
+      {
+        "title": "LATAM-First Infrastructure",
+        "desc": "Puerto Rico Principal Membership gives direct US network access. PIX (BRL), SPEI (MXN), and ACH rails built-in."
+      },
+      {
+        "title": "Full API + Webhooks",
+        "desc": "REST API for card issuance, auth controls, spend limits, and transaction streaming. iFrame widget for PCI scope reduction."
+      }
+    ]
+  },
+  "ramp": {
+    "label": "RAMP-AS-A-SERVICE",
+    "title1": "The bridge between",
+    "title2": "crypto and real money",
+    "subtitle": "Onramp and Offramp in both directions. USD, BRL, and MXN rails built-in. The same infrastructure that powers your card program.",
+    "onramp_label": "Onramp",
+    "onramp_sub": "Fiat → Stablecoin",
+    "offramp_label": "Offramp",
+    "offramp_sub": "Stablecoin → Fiat",
+    "onramp_steps": [
+      "PIX / Wire / ACH",
+      "Fiat received & validated",
+      "Circle Mint USDC",
+      "Stablecoin in wallet"
+    ],
+    "offramp_steps": [
+      "USDC / USDT sent",
+      "On-chain AML screening",
+      "Circle Burn → USD",
+      "Wire / ACH / PIX / SPEI"
+    ],
+    "currencies_label": "SUPPORTED CURRENCIES & RAILS",
+    "currencies": [
+      { "flag": "🇺🇸", "currency": "USD", "rails": "ACH · Wire · SWIFT" },
+      { "flag": "🇧🇷", "currency": "BRL", "rails": "PIX (instant)" },
+      { "flag": "🇲🇽", "currency": "MXN", "rails": "SPEI" }
+    ]
+  },
+  "api": {
+    "label": "DEVELOPER API",
+    "title1": "Built for builders,",
+    "title2": "not bankers",
+    "subtitle": "REST API and SDKs that feel like fintech — not legacy financial middleware. Ship your card program with a few hundred lines of code.",
+    "cta": "View Documentation →",
+    "capabilities": [
+      "Card issuance (virtual + physical)",
+      "Spend controls & velocity limits",
+      "Real-time transaction streaming",
+      "Stablecoin top-up & balance APIs",
+      "KYC/KYB webhooks",
+      "Chargeback management",
+      "iFrame widget (PCI scope reduction)",
+      "3DS & tokenization built-in"
+    ]
+  },
+  "pricing": {
+    "label": "PRICING",
+    "title1": "Transparent pricing,",
+    "title2": "zero exclusivity",
+    "subtitle": "No lock-in. Your clients stay yours. Scale up or down as your program grows.",
+    "most_popular": "Most Popular",
+    "collateral_note": "All plans include Chainalysis AML monitoring, Fireblocks custody integration, and PCI-DSS compliance. Collateral: 3× daily spend volume.",
+    "cta_start": "Get Started →",
+    "cta_contact": "Contact Sales",
+    "setup_label": "setup",
+    "monthly_fee": "mo SaaS fee",
+    "monthly_fee_custom": "Custom monthly fee",
+    "interchange_note": "100% interchange retained by you",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "For early-stage Web3 products",
+        "setup": "$10K",
+        "monthly": "$5K",
+        "rev": "0%",
+        "features": [
+          "Shared BIN",
+          "Virtual cards only",
+          "Up to 1,000 cards",
+          "Sumsub KYC included",
+          "Webhook events",
+          "Dashboard access",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Growth",
+        "tagline": "For exchanges & wallets scaling fast",
+        "setup": "$20K",
+        "monthly": "$10K",
+        "rev": "Revenue share",
+        "features": [
+          "Dedicated BIN ($25K one-time)",
+          "Virtual + Physical cards",
+          "Unlimited cards",
+          "Custom KYC provider",
+          "Apple Pay / Google Pay",
+          "iFrame widget",
+          "Priority support + SLA"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "tagline": "For large programs & custom needs",
+        "setup": "Custom",
+        "monthly": "Custom",
+        "rev": "Negotiable",
+        "features": [
+          "White-label BIN",
+          "Multi-currency programs",
+          "ATM network access",
+          "LATAM rails (PIX, SPEI)",
+          "Dedicated compliance team",
+          "Custom integrations",
+          "24/7 dedicated support"
+        ]
+      }
+    ]
+  },
+  "demo": {
+    "label": "GET STARTED",
+    "title1": "Ready to launch your",
+    "title2": "card program?",
+    "subtitle": "Talk to our team. We'll walk you through the integration, licensing path, and get you a sandbox within 24h.",
+    "field_name": "Full Name",
+    "field_name_placeholder": "Satoshi Nakamoto",
+    "field_email": "Work Email",
+    "field_email_placeholder": "satoshi@company.com",
+    "field_company": "Company",
+    "field_company_placeholder": "Your company",
+    "field_volume": "Expected Monthly Volume",
+    "field_volume_placeholder": "Select volume range",
+    "volume_1": "Less than $1M/mo",
+    "volume_2": "$1M – $5M/mo",
+    "volume_3": "$5M – $20M/mo",
+    "volume_4": "$20M+/mo",
+    "cta": "Book a Demo →",
+    "note": "No commitment. Sandbox access within 24 hours. NDA available.",
+    "success_emoji": "🎉",
+    "success_title": "You're on the list!",
+    "success_text": "Our team will reach out within 24 hours with your sandbox access and a meeting link."
+  },
+  "footer": {
+    "tagline": "Card infrastructure for the stablecoin economy. Visa Principal Issuer, Puerto Rico. LATAM-first.",
+    "copyright": "© 2026 Zelt Inc. All rights reserved. Registered in Delaware. Operated from Puerto Rico.",
+    "disclaimer": "MSB registered with FinCEN · IFE applicant (OCIF Puerto Rico) · Visa Principal Member application in progress",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "links": {
+      "howItWorks": "How It Works",
+      "features": "Features",
+      "ramp": "Ramp",
+      "apiDocs": "API Docs",
+      "pricing": "Pricing",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "aml": "AML Policy",
+      "cookie": "Cookie Policy"
+    }
+  }
+}

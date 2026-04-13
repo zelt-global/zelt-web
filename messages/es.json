@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "howItWorks": "Cómo Funciona",
+    "features": "Características",
+    "ramp": "Ramp",
+    "api": "API",
+    "pricing": "Precios",
+    "logIn": "Iniciar Sesión",
+    "bookDemo": "Reservar Demo →"
+  },
+  "hero": {
+    "badge": "Visa Principal Issuer · Puerto Rico",
+    "headline1": "Infraestructura de tarjetas para la",
+    "headline2": "economía de stablecoins",
+    "subtext": "Lanza tu propio programa de tarjeta cripto en 90 días. Zelt es un Visa Principal Issuer que ofrece Card-as-a-Service respaldado por USDC y USDT — KYC gestionado, API-first, listo para LATAM.",
+    "cta_demo": "Reservar Demo →",
+    "cta_how": "Cómo Funciona",
+    "stat_acceptance_value": "~95%",
+    "stat_acceptance_label": "Tasa de aceptación",
+    "stat_launch_value": "90 días",
+    "stat_launch_label": "Tiempo de lanzamiento",
+    "stat_countries_value": "150+",
+    "stat_countries_label": "Países",
+    "card_holder": "SATOSHI N.",
+    "card_virtual": "TARJETA VIRTUAL",
+    "badge_usdc": "Liquidación en USDC",
+    "badge_usdc_sub": "Instantáneo · Circle",
+    "badge_tx": "$2,450.00 aprobado",
+    "badge_tx_sub": "Amazon · 0.3s"
+  },
+  "networks": {
+    "title": "REDES Y STABLECOINS SOPORTADAS",
+    "soon": "Próximamente",
+    "partners_label": "TECNOLOGÍA"
+  },
+  "howItWorks": {
+    "label": "CÓMO FUNCIONA",
+    "title1": "Lanza en",
+    "title2": "cuatro pasos",
+    "subtitle": "Desde la solicitud hasta la primera tarjeta emitida — normalmente 90 días, incluyendo la certificación Visa.",
+    "steps": [
+      {
+        "title": "Aplica e Integra",
+        "desc": "Envía el perfil de tu empresa. Nuestro equipo de compliance ejecuta el KYB y te incorpora en días, no en meses. Claves API entregadas al instante."
+      },
+      {
+        "title": "Configura tu programa",
+        "desc": "Define límites de gasto, elige tarjetas virtuales o físicas, activa Apple Pay / Google Pay y establece tu colateral. Control total vía dashboard o API."
+      },
+      {
+        "title": "Incorpora a tus usuarios",
+        "desc": "Usa nuestro KYC-as-a-Service (Sumsub) o delega a tu propio proveedor KYC. Emite tarjetas en segundos con una sola llamada API."
+      },
+      {
+        "title": "Sal en vivo y escala",
+        "desc": "Tarjetas aceptadas en más de 150 países. El saldo en stablecoin se convierte automáticamente en el punto de venta. Webhooks en tiempo real, monitoreo de transacciones y gestión de contracargos incluidos."
+      }
+    ]
+  },
+  "features": {
+    "label": "CARACTERÍSTICAS",
+    "title1": "Todo lo que tu programa de tarjeta",
+    "title2": "necesita para escalar",
+    "items": [
+      {
+        "title": "Tarjetas Virtuales y Físicas",
+        "desc": "Emite tarjetas Visa virtuales al instante vía API. Tarjetas físicas enviadas globalmente por Thales / IDEMIA con marca personalizada."
+      },
+      {
+        "title": "KYC/AML Gestionado",
+        "desc": "Stack de compliance completo incluido — KYC Sumsub, monitoreo on-chain Chainalysis y screening OFAC. Delega o self-serve."
+      },
+      {
+        "title": "Liquidación Instantánea",
+        "desc": "USDC quemado vía Circle en el punto de venta. USDT vía OTC institucional. Liquidación el mismo día, sin float requerido de tu parte."
+      },
+      {
+        "title": "Apple Pay y Google Pay",
+        "desc": "Tokenización vía Thredd — tus titulares de tarjeta pueden pagar en todo el mundo desde el primer día. Sin trabajo extra de integración."
+      },
+      {
+        "title": "Infraestructura LATAM-First",
+        "desc": "La membresía Principal en Puerto Rico da acceso directo a la red de EE.UU. Rails PIX (BRL), SPEI (MXN) y ACH integrados."
+      },
+      {
+        "title": "API Completa + Webhooks",
+        "desc": "API REST para emisión de tarjetas, controles de autorización, límites de gasto y streaming de transacciones. Widget iFrame para reducción del alcance PCI."
+      }
+    ]
+  },
+  "ramp": {
+    "label": "RAMP-AS-A-SERVICE",
+    "title1": "El puente entre",
+    "title2": "cripto y el dinero real",
+    "subtitle": "Onramp y Offramp en ambas direcciones. Rails USD, BRL y MXN integrados. La misma infraestructura que impulsa tu programa de tarjeta.",
+    "onramp_label": "Onramp",
+    "onramp_sub": "Fiat → Stablecoin",
+    "offramp_label": "Offramp",
+    "offramp_sub": "Stablecoin → Fiat",
+    "onramp_steps": [
+      "PIX / Wire / ACH",
+      "Fiat recibido y validado",
+      "Circle Mint USDC",
+      "Stablecoin en la billetera"
+    ],
+    "offramp_steps": [
+      "USDC / USDT enviado",
+      "Screening AML on-chain",
+      "Circle Burn → USD",
+      "Wire / ACH / PIX / SPEI"
+    ],
+    "currencies_label": "MONEDAS Y RAILS SOPORTADOS",
+    "currencies": [
+      { "flag": "🇺🇸", "currency": "USD", "rails": "ACH · Wire · SWIFT" },
+      { "flag": "🇧🇷", "currency": "BRL", "rails": "PIX (instantáneo)" },
+      { "flag": "🇲🇽", "currency": "MXN", "rails": "SPEI" }
+    ]
+  },
+  "api": {
+    "label": "API PARA DESARROLLADORES",
+    "title1": "Construido para builders,",
+    "title2": "no para banqueros",
+    "subtitle": "API REST y SDKs que se sienten como fintech — no como middleware financiero heredado. Lanza tu programa de tarjeta con pocas centenas de líneas de código.",
+    "cta": "Ver Documentación →",
+    "capabilities": [
+      "Emisión de tarjetas (virtual + física)",
+      "Controles de gasto y límites de velocidad",
+      "Streaming de transacciones en tiempo real",
+      "APIs de saldo y top-up en stablecoin",
+      "Webhooks KYC/KYB",
+      "Gestión de contracargos",
+      "Widget iFrame (reducción de alcance PCI)",
+      "3DS y tokenización integrados"
+    ]
+  },
+  "pricing": {
+    "label": "PRECIOS",
+    "title1": "Precios transparentes,",
+    "title2": "cero exclusividad",
+    "subtitle": "Sin lock-in. Tus clientes siguen siendo tuyos. Escala hacia arriba o hacia abajo según crece tu programa.",
+    "most_popular": "Más Popular",
+    "collateral_note": "Todos los planes incluyen monitoreo AML de Chainalysis, integración Fireblocks y cumplimiento PCI-DSS. Colateral: 3× el volumen diario de gasto.",
+    "cta_start": "Comenzar →",
+    "cta_contact": "Contactar Ventas",
+    "setup_label": "setup",
+    "monthly_fee": "mes tarifa SaaS",
+    "monthly_fee_custom": "Tarifa mensual personalizada",
+    "interchange_note": "100% del interchange se queda contigo",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "Para productos Web3 en etapa inicial",
+        "setup": "$10K",
+        "monthly": "$5K",
+        "rev": "0%",
+        "features": [
+          "BIN compartido",
+          "Solo tarjetas virtuales",
+          "Hasta 1,000 tarjetas",
+          "KYC Sumsub incluido",
+          "Eventos vía webhook",
+          "Acceso al dashboard",
+          "Soporte por email"
+        ]
+      },
+      {
+        "name": "Growth",
+        "tagline": "Para exchanges y wallets en escala",
+        "setup": "$20K",
+        "monthly": "$10K",
+        "rev": "Revenue share",
+        "features": [
+          "BIN dedicado ($25K único)",
+          "Tarjetas virtuales + físicas",
+          "Tarjetas ilimitadas",
+          "Proveedor KYC personalizado",
+          "Apple Pay / Google Pay",
+          "Widget iFrame",
+          "Soporte prioritario + SLA"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "tagline": "Para programas grandes y necesidades personalizadas",
+        "setup": "Personalizado",
+        "monthly": "Personalizado",
+        "rev": "Negociable",
+        "features": [
+          "BIN white-label",
+          "Programas multi-moneda",
+          "Acceso a red de ATM",
+          "Rails LATAM (PIX, SPEI)",
+          "Equipo de compliance dedicado",
+          "Integraciones personalizadas",
+          "Soporte dedicado 24/7"
+        ]
+      }
+    ]
+  },
+  "demo": {
+    "label": "COMENZAR",
+    "title1": "¿Listo para lanzar tu",
+    "title2": "programa de tarjeta?",
+    "subtitle": "Habla con nuestro equipo. Te guiaremos por la integración, el camino de licenciamiento y tendrás un sandbox en 24h.",
+    "field_name": "Nombre Completo",
+    "field_name_placeholder": "Satoshi Nakamoto",
+    "field_email": "Email Corporativo",
+    "field_email_placeholder": "satoshi@empresa.com",
+    "field_company": "Empresa",
+    "field_company_placeholder": "Tu empresa",
+    "field_volume": "Volumen Mensual Esperado",
+    "field_volume_placeholder": "Selecciona el rango",
+    "volume_1": "Menos de $1M/mes",
+    "volume_2": "$1M – $5M/mes",
+    "volume_3": "$5M – $20M/mes",
+    "volume_4": "$20M+/mes",
+    "cta": "Reservar Demo →",
+    "note": "Sin compromiso. Acceso al sandbox en 24 horas. NDA disponible.",
+    "success_emoji": "🎉",
+    "success_title": "¡Estás en la lista!",
+    "success_text": "Nuestro equipo se pondrá en contacto en 24 horas con tu acceso al sandbox y un enlace de reunión."
+  },
+  "footer": {
+    "tagline": "Infraestructura de tarjetas para la economía de stablecoins. Visa Principal Issuer, Puerto Rico. LATAM-first.",
+    "copyright": "© 2026 Zelt Inc. Todos los derechos reservados. Registrado en Delaware. Operado desde Puerto Rico.",
+    "disclaimer": "MSB registrado en FinCEN · Solicitante IFE (OCIF Puerto Rico) · Solicitud Visa Principal Member en curso",
+    "sections": {
+      "product": "Producto",
+      "company": "Empresa",
+      "legal": "Legal"
+    },
+    "links": {
+      "howItWorks": "Cómo Funciona",
+      "features": "Características",
+      "ramp": "Ramp",
+      "apiDocs": "Documentación API",
+      "pricing": "Precios",
+      "about": "Acerca de",
+      "blog": "Blog",
+      "careers": "Empleos",
+      "press": "Prensa",
+      "contact": "Contacto",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "aml": "Política AML",
+      "cookie": "Política de Cookies"
+    }
+  }
+}
