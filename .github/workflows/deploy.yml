@@ -29,19 +29,19 @@ jobs:
         run: |
           case "${{ github.ref_name }}" in
             main)
-              echo "environment=production"                         >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_PROD }}"    >> $GITHUB_OUTPUT
-              echo "wif_sa=${{ vars.WIF_SA_PROD }}"                >> $GITHUB_OUTPUT
+              echo "environment=production"                            >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_PROD }}"       >> $GITHUB_OUTPUT
+              echo "project_id=${{ vars.PROJECT_ID_PROD }}"           >> $GITHUB_OUTPUT
               ;;
             hml)
-              echo "environment=staging"                           >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_HML }}"    >> $GITHUB_OUTPUT
-              echo "wif_sa=${{ vars.WIF_SA_HML }}"                >> $GITHUB_OUTPUT
+              echo "environment=staging"                              >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_HML }}"       >> $GITHUB_OUTPUT
+              echo "project_id=${{ vars.PROJECT_ID_HML }}"           >> $GITHUB_OUTPUT
               ;;
             *)
-              echo "environment=development"                       >> $GITHUB_OUTPUT
-              echo "wif_provider=${{ vars.WIF_PROVIDER_DEV }}"    >> $GITHUB_OUTPUT
-              echo "wif_sa=${{ vars.WIF_SA_DEV }}"                >> $GITHUB_OUTPUT
+              echo "environment=development"                          >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_DEV }}"       >> $GITHUB_OUTPUT
+              echo "project_id=${{ vars.PROJECT_ID_DEV }}"           >> $GITHUB_OUTPUT
               ;;
           esac
 
@@ -49,19 +49,15 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ steps.resolve.outputs.wif_provider }}
-          service_account: ${{ steps.resolve.outputs.wif_sa }}
+          service_account: github-actions@${{ steps.resolve.outputs.project_id }}.iam.gserviceaccount.com
 
       - name: Set up gcloud CLI
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Fetch project ID
+      - name: Set environment variables
         run: |
-          # Extract project ID from the service account email
-          # e.g. github-actions@zelt-prod.iam.gserviceaccount.com -> zelt-prod
-          WIF_SA="${{ steps.resolve.outputs.wif_sa }}"
-          PROJECT_ID=$(echo "$WIF_SA" | sed 's/github-actions@\(.*\)\.iam\.gserviceaccount\.com/\1/')
-          echo "PROJECT_ID=$PROJECT_ID"           >> $GITHUB_ENV
-          echo "ENVIRONMENT=${{ steps.resolve.outputs.environment }}" >> $GITHUB_ENV
+          echo "PROJECT_ID=${{ steps.resolve.outputs.project_id }}"   >> $GITHUB_ENV
+          echo "ENVIRONMENT=${{ steps.resolve.outputs.environment }}"  >> $GITHUB_ENV
 
       - name: Set image URL
         run: |
