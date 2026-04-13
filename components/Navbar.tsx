@@ -40,7 +40,6 @@ export default function Navbar() {
     { label: t("features"), href: "#features" },
     { label: t("ramp"), href: "#ramp" },
     { label: t("api"), href: "#api" },
-    { label: t("pricing"), href: "#pricing" },
   ];
 
   const currentLang = LOCALES.find((l) => l.code === currentLocale) ?? LOCALES[0];
