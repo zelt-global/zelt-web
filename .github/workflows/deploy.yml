@@ -12,10 +12,6 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      id-token: write   # required for Workload Identity Federation
-
     env:
       REPO_NAME: ${{ github.event.repository.name }}
       REGION: ${{ vars.REGION }}
@@ -25,43 +21,34 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Resolve environment-specific variables
-        id: resolve
         run: |
           case "${{ github.ref_name }}" in
             main)
-              echo "environment=production"                                                                                                    >> $GITHUB_OUTPUT
-              echo "wif_provider=projects/664741318247/locations/global/workloadIdentityPools/github-pool/providers/github-provider"           >> $GITHUB_OUTPUT
-              echo "project_id=zelt-prod"                                                                                                     >> $GITHUB_OUTPUT
+              echo "ENVIRONMENT=production" >> $GITHUB_ENV
               ;;
             hml)
-              echo "environment=staging"                                                                                                       >> $GITHUB_OUTPUT
-              echo "wif_provider=projects/1071534602697/locations/global/workloadIdentityPools/github-pool/providers/github-provider"          >> $GITHUB_OUTPUT
-              echo "project_id=zelt-hml"                                                                                                      >> $GITHUB_OUTPUT
+              echo "ENVIRONMENT=staging"    >> $GITHUB_ENV
               ;;
             *)
-              echo "environment=development"                                                                                                   >> $GITHUB_OUTPUT
-              echo "wif_provider=projects/340444923394/locations/global/workloadIdentityPools/github-pool/providers/github-provider"           >> $GITHUB_OUTPUT
-              echo "project_id=zelt-develop"                                                                                                  >> $GITHUB_OUTPUT
+              echo "ENVIRONMENT=development" >> $GITHUB_ENV
               ;;
           esac
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ steps.resolve.outputs.wif_provider }}
-          service_account: github-actions@${{ steps.resolve.outputs.project_id }}.iam.gserviceaccount.com
+          credentials_json: '${{ github.ref_name == ''main'' && secrets.SERVICE_ACCOUNT_PROD || github.ref_name == ''hml'' && secrets.SERVICE_ACCOUNT_HML || secrets.SERVICE_ACCOUNT_DEV }}'
 
       - name: Set up gcloud CLI
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Set environment variables
+      - name: Fetch project ID
         run: |
-          echo "PROJECT_ID=${{ steps.resolve.outputs.project_id }}"   >> $GITHUB_ENV
-          echo "ENVIRONMENT=${{ steps.resolve.outputs.environment }}"  >> $GITHUB_ENV
+          PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
+          echo "PROJECT_ID=$PROJECT_ID" >> $GITHUB_ENV
 
       - name: Set image URL
-        run: |
-          echo "FULL_REGISTRY_URL=${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${REPO_NAME}:${GITHUB_SHA}" >> $GITHUB_ENV
+        run: echo "FULL_REGISTRY_URL=${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${REPO_NAME}:${GITHUB_SHA}" >> $GITHUB_ENV
 
       - name: Docker auth
         run: gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet
