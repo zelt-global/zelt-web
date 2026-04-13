@@ -94,15 +94,9 @@ export default function Hero() {
             <div className="text-base tracking-[0.2em] mb-4 font-mono" style={{ color: "rgba(255,255,255,0.7)" }}>
               •••• •••• •••• 4821
             </div>
-            <div className="flex justify-between items-end">
-              <div>
-                <div className="text-xs mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>CARDHOLDER</div>
-                <div className="text-sm font-semibold">{t("card_holder")}</div>
-              </div>
-              <div className="flex items-center gap-1">
-                <div className="w-7 h-7 rounded-full opacity-90" style={{ background: "#ef4444" }} />
-                <div className="w-7 h-7 rounded-full -ml-3 opacity-90" style={{ background: "#f97316" }} />
-              </div>
+            <div>
+              <div className="text-xs mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>CARDHOLDER</div>
+              <div className="text-sm font-semibold">{t("card_holder")}</div>
             </div>
             <div className="absolute top-5 right-5 text-xs font-bold tracking-widest" style={{ color: "rgba(255,255,255,0.5)" }}>VISA</div>
           </div>
