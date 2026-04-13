@@ -12,8 +12,8 @@ const chains = [
 ];
 
 const stablecoins = [
-  { name: "USDC", issuer: "Circle", color: "#2775CA", bg: "rgba(39,117,202,0.12)" },
-  { name: "USDT", issuer: "Tether", color: "#26A17B", bg: "rgba(38,161,123,0.12)" },
+  { name: "USDC", color: "#2775CA", bg: "rgba(39,117,202,0.12)" },
+  { name: "USDT", color: "#26A17B", bg: "rgba(38,161,123,0.12)" },
 ];
 
 export default function Networks() {
@@ -65,7 +65,6 @@ export default function Networks() {
                 >
                   <div className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold" style={{ background: sc.color, color: "#fff" }}>$</div>
                   <span className="text-sm font-medium">{sc.name}</span>
-                  <span className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>{sc.issuer}</span>
                 </div>
               ))}
             </div>

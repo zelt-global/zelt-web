@@ -23,7 +23,6 @@
     "card_holder": "SATOSHI N.",
     "card_virtual": "TARJETA VIRTUAL",
     "badge_usdc": "Liquidación USDC / USDT",
-    "badge_usdc_sub": "Instantáneo · Circle",
     "badge_tx": "$2,450.00 aprobado",
     "badge_tx_sub": "Amazon · 0.3s"
   },
@@ -67,11 +66,11 @@
       },
       {
         "title": "KYC/AML Gestionado",
-        "desc": "Stack de compliance completo incluido — KYC Sumsub, monitoreo on-chain Chainalysis y screening OFAC. Delega o self-serve."
+        "desc": "Stack de compliance completo incluido — KYC, monitoreo on-chain y screening OFAC. Delega o self-serve."
       },
       {
         "title": "Apple Pay y Google Pay",
-        "desc": "Tokenización vía Thredd — tus titulares de tarjeta pueden pagar en todo el mundo desde el primer día. Sin trabajo extra de integración."
+        "desc": "Tus titulares de tarjeta pueden pagar en todo el mundo desde el primer día. Sin trabajo extra de integración."
       },
       {
         "title": "Infraestructura LATAM-First",
@@ -95,13 +94,13 @@
     "onramp_steps": [
       "PIX / Wire / ACH",
       "Fiat recibido y validado",
-      "Circle Mint USDC",
+      "Mint USDC / USDT",
       "Stablecoin en la billetera"
     ],
     "offramp_steps": [
       "USDC / USDT enviado",
       "Screening AML on-chain",
-      "Circle Burn → USD",
+      "Burn → USD",
       "Wire / ACH / PIX / SPEI"
     ],
     "currencies_label": "MONEDAS Y RAILS SOPORTADOS",

@@ -98,7 +98,6 @@ export default function Hero() {
               <div className="text-xs mb-1" style={{ color: "rgba(255,255,255,0.4)" }}>CARDHOLDER</div>
               <div className="text-sm font-semibold">{t("card_holder")}</div>
             </div>
-            <div className="absolute top-5 right-5 text-xs font-bold tracking-widest" style={{ color: "rgba(255,255,255,0.5)" }}>VISA</div>
           </div>
 
           {/* Background card */}
@@ -108,10 +107,7 @@ export default function Hero() {
           >
             <div className="w-8 h-6 rounded mb-6" style={{ background: "rgba(255,255,255,0.15)" }} />
             <div className="font-mono text-sm tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.5)" }}>•••• •••• •••• 7293</div>
-            <div className="flex justify-between items-end">
-              <div className="text-xs font-semibold" style={{ color: "rgba(255,255,255,0.6)" }}>{t("card_virtual")}</div>
-              <div className="text-xs font-bold tracking-widest" style={{ color: "rgba(255,255,255,0.4)" }}>VISA</div>
-            </div>
+            <div className="text-xs font-semibold" style={{ color: "rgba(255,255,255,0.6)" }}>{t("card_virtual")}</div>
           </div>
 
           {/* Badge USDC */}
@@ -119,7 +115,6 @@ export default function Hero() {
             <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: "#2775CA", color: "#fff" }}>$</div>
             <div>
               <div className="text-xs font-semibold">{t("badge_usdc")}</div>
-              <div className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>{t("badge_usdc_sub")}</div>
             </div>
           </div>
 
