@@ -96,7 +96,7 @@ jobs:
             --platform managed \
             --allow-unauthenticated \
             --set-env-vars="NODE_ENV=${ENVIRONMENT}" \
-            --service-account="frontend-runtime@${PROJECT_ID}.iam.gserviceaccount.com" \
+            --service-account="${REPO_NAME}-runtime@${PROJECT_ID}.iam.gserviceaccount.com" \
             --quiet
 
       - name: Allow public access
