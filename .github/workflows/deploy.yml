@@ -12,6 +12,10 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      id-token: write   # required for Workload Identity Federation
+
     env:
       REPO_NAME: ${{ github.event.repository.name }}
       REGION: ${{ vars.REGION }}
@@ -21,39 +25,43 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Resolve environment-specific variables
+        id: resolve
         run: |
           case "${{ github.ref_name }}" in
             main)
-              echo "ENV_SUFFIX=prod"        >> $GITHUB_ENV
-              echo "ENVIRONMENT=production" >> $GITHUB_ENV
+              echo "environment=production"                         >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_PROD }}"    >> $GITHUB_OUTPUT
+              echo "wif_sa=${{ vars.WIF_SA_PROD }}"                >> $GITHUB_OUTPUT
               ;;
             hml)
-              echo "ENV_SUFFIX=hml"         >> $GITHUB_ENV
-              echo "ENVIRONMENT=staging"    >> $GITHUB_ENV
+              echo "environment=staging"                           >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_HML }}"    >> $GITHUB_OUTPUT
+              echo "wif_sa=${{ vars.WIF_SA_HML }}"                >> $GITHUB_OUTPUT
               ;;
             *)
-              echo "ENV_SUFFIX=dev"         >> $GITHUB_ENV
-              echo "ENVIRONMENT=development" >> $GITHUB_ENV
+              echo "environment=development"                       >> $GITHUB_OUTPUT
+              echo "wif_provider=${{ vars.WIF_PROVIDER_DEV }}"    >> $GITHUB_OUTPUT
+              echo "wif_sa=${{ vars.WIF_SA_DEV }}"                >> $GITHUB_OUTPUT
               ;;
           esac
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: >-
-            ${{
-              github.ref_name == 'main' && secrets.SERVICE_ACCOUNT_PROD ||
-              github.ref_name == 'hml'  && secrets.SERVICE_ACCOUNT_HML  ||
-              secrets.SERVICE_ACCOUNT_DEV
-            }}
+          workload_identity_provider: ${{ steps.resolve.outputs.wif_provider }}
+          service_account: ${{ steps.resolve.outputs.wif_sa }}
 
       - name: Set up gcloud CLI
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Fetch project ID
         run: |
-          PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
-          echo "PROJECT_ID=$PROJECT_ID" >> $GITHUB_ENV
+          # Extract project ID from the service account email
+          # e.g. github-actions@zelt-prod.iam.gserviceaccount.com -> zelt-prod
+          WIF_SA="${{ steps.resolve.outputs.wif_sa }}"
+          PROJECT_ID=$(echo "$WIF_SA" | sed 's/github-actions@\(.*\)\.iam\.gserviceaccount\.com/\1/')
+          echo "PROJECT_ID=$PROJECT_ID"           >> $GITHUB_ENV
+          echo "ENVIRONMENT=${{ steps.resolve.outputs.environment }}" >> $GITHUB_ENV
 
       - name: Set image URL
         run: |
