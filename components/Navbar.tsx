@@ -9,7 +9,7 @@ import { useParams } from "next/navigation";
 const LOCALES = [
   { code: "en", label: "EN", flag: "🇺🇸" },
   { code: "pt-BR", label: "PT", flag: "🇧🇷" },
-  { code: "es", label: "ES", flag: "🇲🇽" },
+  { code: "es", label: "ES", flag: "🇪🇸" },
 ];
 
 export default function Navbar() {

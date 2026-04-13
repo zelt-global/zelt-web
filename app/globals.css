@@ -17,15 +17,6 @@
   --font-mono: "JetBrains Mono", monospace;
 }
 
-:root {
-  --background: #030b18;
-  --foreground: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -34,8 +25,6 @@ body {
   background: #030b18;
   color: #ffffff;
   font-family: "Outfit", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .glass {
@@ -84,7 +73,6 @@ body {
   50%       { opacity: 1; }
 }
 
-.reveal         { animation: fadeInUp 0.65s ease both; }
 .reveal-delay-1 { animation: fadeInUp 0.65s ease 0.1s both; }
 .reveal-delay-2 { animation: fadeInUp 0.65s ease 0.2s both; }
 .reveal-delay-3 { animation: fadeInUp 0.65s ease 0.3s both; }
