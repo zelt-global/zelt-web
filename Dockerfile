@@ -7,6 +7,19 @@ RUN npm ci
 # ── 2. Builder ────────────────────────────────────────────────────────────────
 FROM node:24-alpine AS builder
 WORKDIR /app
+
+ARG AUTH0_DOMAIN
+ARG AUTH0_CLIENT_ID
+ARG AUTH0_CLIENT_SECRET
+ARG AUTH0_SECRET
+ARG APP_BASE_URL
+
+ENV AUTH0_DOMAIN=$AUTH0_DOMAIN
+ENV AUTH0_CLIENT_ID=$AUTH0_CLIENT_ID
+ENV AUTH0_CLIENT_SECRET=$AUTH0_CLIENT_SECRET
+ENV AUTH0_SECRET=$AUTH0_SECRET
+ENV APP_BASE_URL=$APP_BASE_URL
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
