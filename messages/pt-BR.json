@@ -6,6 +6,7 @@
     "api": "API",
     "pricing": "Preços",
     "logIn": "Entrar",
+    "dashboard": "Dashboard",
     "bookDemo": "Agendar Demo →"
   },
   "hero": {
@@ -213,6 +214,105 @@
     "success_emoji": "🎉",
     "success_title": "Você está na lista!",
     "success_text": "Nossa equipe entrará em contato em até 24 horas com o acesso ao sandbox e um link para reunião."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Visão Geral",
+      "cards": "Cartões",
+      "transactions": "Transações",
+      "apiKeys": "Chaves de API",
+      "settings": "Configurações",
+      "logout": "Sair"
+    },
+    "overview": {
+      "welcomeBack": "Bem-vindo de volta, {name}",
+      "subtitle": "Veja o que está acontecendo com seu programa de cartão.",
+      "stats": {
+        "activeCards": "Cartões Ativos",
+        "monthlyVolume": "Volume Mensal",
+        "approvalRate": "Taxa de Aprovação",
+        "apiCalls": "Chamadas de API (24h)"
+      },
+      "trends": {
+        "thisMonth": "+12% este mês",
+        "vsLastMonth": "+8,3% vs mês anterior",
+        "stable": "Estável",
+        "today": "+2,1k hoje"
+      }
+    },
+    "cards": { "title": "Cartões", "comingSoon": "Gerenciamento de cartões em breve." },
+    "transactions": { "title": "Transações", "comingSoon": "Histórico de transações em breve." },
+    "apiKeys": { "title": "Chaves de API", "comingSoon": "Gerenciamento de chaves de API em breve." },
+    "settings": {
+      "title": "Configurações",
+      "nav": {
+        "profile": "Perfil",
+        "security": "Segurança",
+        "billing": "Faturamento",
+        "team": "Equipe",
+        "notifications": "Notificações"
+      },
+      "profile": {
+        "title": "Perfil",
+        "subtitle": "Gerencie suas informações pessoais e preferências.",
+        "changePhoto": "Alterar foto",
+        "fullName": "Nome Completo",
+        "email": "Email",
+        "emailHint": "Gerenciado pelo seu provedor de identidade.",
+        "jobTitle": "Cargo",
+        "company": "Empresa",
+        "timezone": "Fuso horário",
+        "save": "Salvar alterações"
+      },
+      "security": {
+        "title": "Segurança",
+        "subtitle": "Gerencie a segurança da sua conta e sessões ativas.",
+        "twoFactor": "Autenticação de Dois Fatores",
+        "twoFactorDesc": "Adicione uma camada extra de segurança à sua conta.",
+        "notEnabled": "Não ativado",
+        "authenticatorApp": "App autenticador",
+        "enable2FA": "Ativar 2FA",
+        "password": "Senha",
+        "passwordDesc": "Altere a senha da sua conta.",
+        "currentPassword": "Senha atual",
+        "newPassword": "Nova senha",
+        "confirmPassword": "Confirmar nova senha",
+        "updatePassword": "Atualizar senha",
+        "sessions": "Sessões Ativas",
+        "sessionsDesc": "Dispositivos conectados à sua conta.",
+        "thisDevice": "Este dispositivo",
+        "revoke": "Revogar"
+      },
+      "billing": {
+        "title": "Faturamento",
+        "subtitle": "Gerencie sua assinatura e informações de pagamento.",
+        "currentPlan": "Plano Atual",
+        "active": "Ativo",
+        "changePlan": "Alterar plano",
+        "paymentMethod": "Método de Pagamento",
+        "paymentMethodDesc": "Usado para a taxa mensal SaaS.",
+        "update": "Atualizar",
+        "invoiceHistory": "Histórico de Faturas",
+        "invoiceHistoryDesc": "Baixe faturas anteriores para seus registros."
+      },
+      "team": {
+        "title": "Equipe",
+        "subtitle": "Gerencie os membros da sua equipe e seus papéis.",
+        "inviteMember": "+ Convidar membro",
+        "member": "Membro",
+        "role": "Papel",
+        "joined": "Entrou",
+        "pendingInvites": "{count} convite pendente",
+        "resend": "Reenviar"
+      },
+      "notifications": {
+        "title": "Notificações",
+        "subtitle": "Escolha quais eventos disparam notificações por email.",
+        "webhook": "Endpoint de webhook",
+        "webhookDesc": "Receba payloads de eventos em tempo real no seu servidor.",
+        "save": "Salvar"
+      }
+    }
   },
   "footer": {
     "tagline": "Infraestrutura de cartões para a economia de stablecoins. LATAM-first.",

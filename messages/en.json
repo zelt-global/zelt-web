@@ -6,6 +6,7 @@
     "api": "API",
     "pricing": "Pricing",
     "logIn": "Log In",
+    "dashboard": "Dashboard",
     "bookDemo": "Book a Demo →"
   },
   "hero": {
@@ -213,6 +214,105 @@
     "success_emoji": "🎉",
     "success_title": "You're on the list!",
     "success_text": "Our team will reach out within 24 hours with your sandbox access and a meeting link."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "cards": "Cards",
+      "transactions": "Transactions",
+      "apiKeys": "API Keys",
+      "settings": "Settings",
+      "logout": "Log out"
+    },
+    "overview": {
+      "welcomeBack": "Welcome back, {name}",
+      "subtitle": "Here's what's happening with your card program.",
+      "stats": {
+        "activeCards": "Active Cards",
+        "monthlyVolume": "Monthly Volume",
+        "approvalRate": "Approval Rate",
+        "apiCalls": "API Calls (24h)"
+      },
+      "trends": {
+        "thisMonth": "+12% this month",
+        "vsLastMonth": "+8.3% vs last month",
+        "stable": "Stable",
+        "today": "+2.1k today"
+      }
+    },
+    "cards": { "title": "Cards", "comingSoon": "Card management coming soon." },
+    "transactions": { "title": "Transactions", "comingSoon": "Transaction history coming soon." },
+    "apiKeys": { "title": "API Keys", "comingSoon": "API key management coming soon." },
+    "settings": {
+      "title": "Settings",
+      "nav": {
+        "profile": "Profile",
+        "security": "Security",
+        "billing": "Billing",
+        "team": "Team",
+        "notifications": "Notifications"
+      },
+      "profile": {
+        "title": "Profile",
+        "subtitle": "Manage your personal information and preferences.",
+        "changePhoto": "Change photo",
+        "fullName": "Full Name",
+        "email": "Email",
+        "emailHint": "Managed by your identity provider.",
+        "jobTitle": "Job Title",
+        "company": "Company",
+        "timezone": "Timezone",
+        "save": "Save changes"
+      },
+      "security": {
+        "title": "Security",
+        "subtitle": "Manage your account security and active sessions.",
+        "twoFactor": "Two-Factor Authentication",
+        "twoFactorDesc": "Add an extra layer of security to your account.",
+        "notEnabled": "Not enabled",
+        "authenticatorApp": "Authenticator app",
+        "enable2FA": "Enable 2FA",
+        "password": "Password",
+        "passwordDesc": "Change your account password.",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm new password",
+        "updatePassword": "Update password",
+        "sessions": "Active Sessions",
+        "sessionsDesc": "Devices currently signed in to your account.",
+        "thisDevice": "This device",
+        "revoke": "Revoke"
+      },
+      "billing": {
+        "title": "Billing",
+        "subtitle": "Manage your subscription and payment information.",
+        "currentPlan": "Current Plan",
+        "active": "Active",
+        "changePlan": "Change plan",
+        "paymentMethod": "Payment Method",
+        "paymentMethodDesc": "Used for monthly SaaS fee.",
+        "update": "Update",
+        "invoiceHistory": "Invoice History",
+        "invoiceHistoryDesc": "Download past invoices for your records."
+      },
+      "team": {
+        "title": "Team",
+        "subtitle": "Manage your team members and their roles.",
+        "inviteMember": "+ Invite member",
+        "member": "Member",
+        "role": "Role",
+        "joined": "Joined",
+        "pendingInvites": "{count} pending invite",
+        "resend": "Resend"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "subtitle": "Choose which events trigger email notifications.",
+        "webhook": "Webhook endpoint",
+        "webhookDesc": "Receive real-time event payloads to your server.",
+        "save": "Save"
+      }
+    }
   },
   "footer": {
     "tagline": "Card infrastructure for the stablecoin economy. LATAM-first.",

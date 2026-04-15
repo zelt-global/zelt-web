@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import NavbarWrapper from "@/components/NavbarWrapper";
 import Hero from "@/components/Hero";
 import Networks from "@/components/Networks";
 import HowItWorks from "@/components/HowItWorks";
@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavbarWrapper />
       <main>
         <Hero />
         <Networks />

@@ -12,7 +12,7 @@ const LOCALES = [
   { code: "es", label: "ES", flag: "🇪🇸" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ isAuthenticated = false }: { isAuthenticated?: boolean }) {
   const t = useTranslations("nav");
   const router = useRouter();
   const pathname = usePathname();
@@ -143,13 +143,13 @@ export default function Navbar() {
           </div>
 
           <a
-            href="#"
+            href={isAuthenticated ? `/${currentLocale}/dashboard` : `/auth/login?returnTo=/${currentLocale}/dashboard`}
             className="text-sm transition-colors duration-200"
             style={{ color: "rgba(255,255,255,0.6)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
           >
-            {t("logIn")}
+            {isAuthenticated ? t("dashboard") : t("logIn")}
           </a>
 
           <a

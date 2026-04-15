@@ -6,6 +6,7 @@
     "api": "API",
     "pricing": "Precios",
     "logIn": "Iniciar Sesión",
+    "dashboard": "Dashboard",
     "bookDemo": "Reservar Demo →"
   },
   "hero": {
@@ -213,6 +214,105 @@
     "success_emoji": "🎉",
     "success_title": "¡Estás en la lista!",
     "success_text": "Nuestro equipo se pondrá en contacto en 24 horas con tu acceso al sandbox y un enlace de reunión."
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Resumen",
+      "cards": "Tarjetas",
+      "transactions": "Transacciones",
+      "apiKeys": "Claves de API",
+      "settings": "Configuración",
+      "logout": "Cerrar sesión"
+    },
+    "overview": {
+      "welcomeBack": "Bienvenido de nuevo, {name}",
+      "subtitle": "Esto es lo que está pasando con tu programa de tarjeta.",
+      "stats": {
+        "activeCards": "Tarjetas Activas",
+        "monthlyVolume": "Volumen Mensual",
+        "approvalRate": "Tasa de Aprobación",
+        "apiCalls": "Llamadas a API (24h)"
+      },
+      "trends": {
+        "thisMonth": "+12% este mes",
+        "vsLastMonth": "+8,3% vs mes anterior",
+        "stable": "Estable",
+        "today": "+2,1k hoy"
+      }
+    },
+    "cards": { "title": "Tarjetas", "comingSoon": "Gestión de tarjetas próximamente." },
+    "transactions": { "title": "Transacciones", "comingSoon": "Historial de transacciones próximamente." },
+    "apiKeys": { "title": "Claves de API", "comingSoon": "Gestión de claves de API próximamente." },
+    "settings": {
+      "title": "Configuración",
+      "nav": {
+        "profile": "Perfil",
+        "security": "Seguridad",
+        "billing": "Facturación",
+        "team": "Equipo",
+        "notifications": "Notificaciones"
+      },
+      "profile": {
+        "title": "Perfil",
+        "subtitle": "Administra tu información personal y preferencias.",
+        "changePhoto": "Cambiar foto",
+        "fullName": "Nombre Completo",
+        "email": "Correo electrónico",
+        "emailHint": "Administrado por tu proveedor de identidad.",
+        "jobTitle": "Cargo",
+        "company": "Empresa",
+        "timezone": "Zona horaria",
+        "save": "Guardar cambios"
+      },
+      "security": {
+        "title": "Seguridad",
+        "subtitle": "Administra la seguridad de tu cuenta y sesiones activas.",
+        "twoFactor": "Autenticación de Dos Factores",
+        "twoFactorDesc": "Agrega una capa extra de seguridad a tu cuenta.",
+        "notEnabled": "No activado",
+        "authenticatorApp": "App autenticador",
+        "enable2FA": "Activar 2FA",
+        "password": "Contraseña",
+        "passwordDesc": "Cambia la contraseña de tu cuenta.",
+        "currentPassword": "Contraseña actual",
+        "newPassword": "Nueva contraseña",
+        "confirmPassword": "Confirmar nueva contraseña",
+        "updatePassword": "Actualizar contraseña",
+        "sessions": "Sesiones Activas",
+        "sessionsDesc": "Dispositivos conectados a tu cuenta.",
+        "thisDevice": "Este dispositivo",
+        "revoke": "Revocar"
+      },
+      "billing": {
+        "title": "Facturación",
+        "subtitle": "Administra tu suscripción e información de pago.",
+        "currentPlan": "Plan Actual",
+        "active": "Activo",
+        "changePlan": "Cambiar plan",
+        "paymentMethod": "Método de Pago",
+        "paymentMethodDesc": "Usado para la tarifa mensual SaaS.",
+        "update": "Actualizar",
+        "invoiceHistory": "Historial de Facturas",
+        "invoiceHistoryDesc": "Descarga facturas anteriores para tus registros."
+      },
+      "team": {
+        "title": "Equipo",
+        "subtitle": "Administra los miembros de tu equipo y sus roles.",
+        "inviteMember": "+ Invitar miembro",
+        "member": "Miembro",
+        "role": "Rol",
+        "joined": "Ingresó",
+        "pendingInvites": "{count} invitación pendiente",
+        "resend": "Reenviar"
+      },
+      "notifications": {
+        "title": "Notificaciones",
+        "subtitle": "Elige qué eventos disparan notificaciones por correo.",
+        "webhook": "Endpoint de webhook",
+        "webhookDesc": "Recibe payloads de eventos en tiempo real en tu servidor.",
+        "save": "Guardar"
+      }
+    }
   },
   "footer": {
     "tagline": "Infraestructura de tarjetas para la economía de stablecoins. LATAM-first.",
