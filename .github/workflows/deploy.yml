@@ -66,14 +66,22 @@ jobs:
               --description="Docker images for ${REPO_NAME}"
           fi
 
+      - name: Fetch secrets from Secret Manager
+        run: |
+          echo "AUTH0_DOMAIN=$(gcloud secrets versions access latest --secret=AUTH0_DOMAIN)" >> $GITHUB_ENV
+          echo "AUTH0_CLIENT_ID=$(gcloud secrets versions access latest --secret=AUTH0_CLIENT_ID)" >> $GITHUB_ENV
+          echo "AUTH0_CLIENT_SECRET=$(gcloud secrets versions access latest --secret=AUTH0_CLIENT_SECRET)" >> $GITHUB_ENV
+          echo "AUTH0_SECRET=$(gcloud secrets versions access latest --secret=AUTH0_SECRET)" >> $GITHUB_ENV
+          echo "APP_BASE_URL=$(gcloud secrets versions access latest --secret=APP_BASE_URL)" >> $GITHUB_ENV
+
       - name: Build and push Docker image
         run: |
           docker build \
-            --build-arg AUTH0_DOMAIN=${{ secrets.AUTH0_DOMAIN }} \
-            --build-arg AUTH0_CLIENT_ID=${{ secrets.AUTH0_CLIENT_ID }} \
-            --build-arg AUTH0_CLIENT_SECRET=${{ secrets.AUTH0_CLIENT_SECRET }} \
-            --build-arg AUTH0_SECRET=${{ secrets.AUTH0_SECRET }} \
-            --build-arg APP_BASE_URL=${{ secrets.APP_BASE_URL }} \
+            --build-arg AUTH0_DOMAIN="${AUTH0_DOMAIN}" \
+            --build-arg AUTH0_CLIENT_ID="${AUTH0_CLIENT_ID}" \
+            --build-arg AUTH0_CLIENT_SECRET="${AUTH0_CLIENT_SECRET}" \
+            --build-arg AUTH0_SECRET="${AUTH0_SECRET}" \
+            --build-arg APP_BASE_URL="${APP_BASE_URL}" \
             -t "$FULL_REGISTRY_URL" .
           docker push "$FULL_REGISTRY_URL"
 
@@ -84,7 +92,8 @@ jobs:
             --image "$FULL_REGISTRY_URL" \
             --platform managed \
             --allow-unauthenticated \
-            --set-env-vars="NODE_ENV=${ENVIRONMENT},AUTH0_DOMAIN=${{ secrets.AUTH0_DOMAIN }},AUTH0_CLIENT_ID=${{ secrets.AUTH0_CLIENT_ID }},AUTH0_CLIENT_SECRET=${{ secrets.AUTH0_CLIENT_SECRET }},AUTH0_SECRET=${{ secrets.AUTH0_SECRET }},APP_BASE_URL=${{ secrets.APP_BASE_URL }}" \
+            --set-env-vars="NODE_ENV=${ENVIRONMENT}" \
+            --set-secrets="AUTH0_DOMAIN=AUTH0_DOMAIN:latest,AUTH0_CLIENT_ID=AUTH0_CLIENT_ID:latest,AUTH0_CLIENT_SECRET=AUTH0_CLIENT_SECRET:latest,AUTH0_SECRET=AUTH0_SECRET:latest,APP_BASE_URL=APP_BASE_URL:latest" \
             --service-account="${REPO_NAME}-runtime@${PROJECT_ID}.iam.gserviceaccount.com" \
             --quiet
 
