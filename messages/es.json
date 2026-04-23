@@ -2,22 +2,22 @@
   "nav": {
     "howItWorks": "Cómo Funciona",
     "features": "Características",
-    "ramp": "Ramp",
     "api": "API",
     "pricing": "Precios",
     "logIn": "Iniciar Sesión",
     "dashboard": "Dashboard",
-    "bookDemo": "Reservar Demo →"
+    "bookDemo": "Hablemos →"
   },
   "hero": {
-    "headline1": "Infraestructura de tarjetas para la",
-    "headline2": "economía de stablecoins",
-    "subtext": "Lanza tu propio programa de tarjeta cripto en 90 días. Zelt ofrece Card-as-a-Service respaldado por USDC y USDT — KYC gestionado, API-first, listo para LATAM.",
-    "cta_demo": "Reservar Demo →",
+    "headline1": "Emite Tarjetas.",
+    "headline2": "Gasta Stablecoins.",
+    "headline3": "Expande Globalmente.",
+    "subtext": "El Card-as-a-Service de Zelt permite que tu plataforma lance tarjetas de crédito Visa respaldadas por stablecoins en tan solo 1 mes, con compliance completo, aceptación global y gestión del programa de extremo a extremo.",
+    "cta_demo": "Hablemos →",
     "cta_how": "Cómo Funciona",
     "stat_acceptance_value": "~95%",
     "stat_acceptance_label": "Tasa de aceptación",
-    "stat_launch_value": "90 días",
+    "stat_launch_value": "30 días",
     "stat_launch_label": "Tiempo de lanzamiento",
     "stat_countries_value": "150+",
     "stat_countries_label": "Países",
@@ -36,7 +36,7 @@
     "label": "CÓMO FUNCIONA",
     "title1": "Lanza en",
     "title2": "cuatro pasos",
-    "subtitle": "Desde la solicitud hasta la primera tarjeta emitida — normalmente 90 días, incluyendo la certificación Visa.",
+    "subtitle": "Desde la solicitud hasta la primera tarjeta emitida. Normalmente 90 días, incluyendo la certificación Visa.",
     "steps": [
       {
         "title": "Aplica e Integra",
@@ -56,66 +56,38 @@
       }
     ]
   },
+  "showcase": {
+    "label": "PLATAFORMA",
+    "title": "Una plataforma. Control total.",
+    "subtitle": "Todo lo que necesitas para emitir, gestionar y escalar tu programa de tarjeta, todo en un solo dashboard."
+  },
   "features": {
     "label": "CARACTERÍSTICAS",
-    "title1": "Todo lo que tu programa de tarjeta",
-    "title2": "necesita para escalar",
+    "title1": "Construido para cada capa",
+    "title2": "de tu programa de tarjeta",
     "items": [
       {
-        "title": "Tarjetas Virtuales y Físicas",
-        "desc": "Emite tarjetas Visa virtuales al instante vía API. Tarjetas físicas enviadas globalmente con marca personalizada."
+        "title": "Emisión de Tarjetas",
+        "desc": "Emite tarjetas Visa virtuales y físicas al instante vía API. Marca personalizada, Apple Pay, Google Pay y controles en tiempo real incluidos desde el primer día.",
+        "bullets": ["Tarjetas virtuales en segundos vía API", "Tarjetas físicas con marca personalizada", "Apple Pay & Google Pay listos"]
       },
       {
-        "title": "KYC/AML Gestionado",
-        "desc": "Stack de compliance completo incluido — KYC, monitoreo on-chain y screening OFAC. Delega o self-serve."
+        "title": "KYC/AML & Compliance",
+        "desc": "Stack de compliance completo de fábrica. KYC-as-a-Service con Sumsub, monitoreo AML on-chain y screening OFAC. Conecta tu propio proveedor o usa el nuestro.",
+        "bullets": ["KYC-as-a-Service (Sumsub)", "AML on-chain + screening OFAC", "Delega o gestiona tú mismo el compliance"]
       },
       {
-        "title": "Apple Pay y Google Pay",
-        "desc": "Tus titulares de tarjeta pueden pagar en todo el mundo desde el primer día. Sin trabajo extra de integración."
-      },
-      {
-        "title": "Infraestructura LATAM-First",
-        "desc": "Rails PIX (BRL), SPEI (MXN) y ACH integrados. Cobertura LATAM completa desde el primer día."
-      },
-      {
-        "title": "API Completa + Webhooks",
-        "desc": "API REST para emisión de tarjetas, controles de autorización, límites de gasto y streaming de transacciones. Widget iFrame para reducción del alcance PCI."
+        "title": "Infraestructura API-First",
+        "desc": "API REST y webhooks construidos para desarrolladores. Emisión de tarjetas, controles de gasto, streaming de transacciones en tiempo real y widget iFrame para reducir el alcance PCI.",
+        "bullets": ["API REST completa + webhooks", "Streaming de transacciones en tiempo real", "Widget iFrame para reducción de alcance PCI"]
       }
-    ]
-  },
-  "ramp": {
-    "label": "RAMP-AS-A-SERVICE",
-    "title1": "El puente entre",
-    "title2": "cripto y el dinero real",
-    "subtitle": "Onramp y Offramp en ambas direcciones. Rails USD, BRL y MXN integrados. La misma infraestructura que impulsa tu programa de tarjeta.",
-    "onramp_label": "Onramp",
-    "onramp_sub": "Fiat → Stablecoin",
-    "offramp_label": "Offramp",
-    "offramp_sub": "Stablecoin → Fiat",
-    "onramp_steps": [
-      "PIX / Wire / ACH",
-      "Fiat recibido y validado",
-      "Mint USDC / USDT",
-      "Stablecoin en la billetera"
-    ],
-    "offramp_steps": [
-      "USDC / USDT enviado",
-      "Screening AML on-chain",
-      "Burn → USD",
-      "Wire / ACH / PIX / SPEI"
-    ],
-    "currencies_label": "MONEDAS Y RAILS SOPORTADOS",
-    "currencies": [
-      { "flag": "🇺🇸", "currency": "USD", "rails": "ACH · Wire · SWIFT" },
-      { "flag": "🇧🇷", "currency": "BRL", "rails": "PIX (instantáneo)" },
-      { "flag": "🇲🇽", "currency": "MXN", "rails": "SPEI" }
     ]
   },
   "api": {
     "label": "API PARA DESARROLLADORES",
-    "title1": "Construido para builders,",
-    "title2": "no para banqueros",
-    "subtitle": "API REST y SDKs que se sienten como fintech — no como middleware financiero heredado. Lanza tu programa de tarjeta con pocas centenas de líneas de código.",
+    "title1": "Construido para",
+    "title2": "builders.",
+    "subtitle": "API REST y SDKs que se sienten como fintech, no como middleware financiero heredado. Lanza tu programa de tarjeta con pocas centenas de líneas de código.",
     "cta": "Ver Documentación →",
     "capabilities": [
       "Emisión de tarjetas (virtual + física)",
@@ -203,17 +175,15 @@
     "field_email_placeholder": "satoshi@empresa.com",
     "field_company": "Empresa",
     "field_company_placeholder": "Tu empresa",
-    "field_volume": "Volumen Mensual Esperado",
-    "field_volume_placeholder": "Selecciona el rango",
-    "volume_1": "Menos de $1M/mes",
-    "volume_2": "$1M – $5M/mes",
-    "volume_3": "$5M – $20M/mes",
-    "volume_4": "$20M+/mes",
-    "cta": "Reservar Demo →",
+    "field_timezone": "Zona Horaria",
+    "field_timezone_placeholder": "Selecciona tu zona horaria",
+    "field_message": "Mensaje (Opcional)",
+    "field_message_placeholder": "Cuéntanos sobre tu proyecto...",
+    "cta": "Hablemos →",
     "note": "Sin compromiso. Acceso al sandbox en 24 horas. NDA disponible.",
-    "success_emoji": "🎉",
-    "success_title": "¡Estás en la lista!",
-    "success_text": "Nuestro equipo se pondrá en contacto en 24 horas con tu acceso al sandbox y un enlace de reunión."
+    "success_emoji": "✅",
+    "success_title": "¡Solicitud recibida!",
+    "success_text": "Gracias por tu interés. Nuestro equipo se pondrá en contacto contigo en breve."
   },
   "dashboard": {
     "nav": {
@@ -315,9 +285,11 @@
     }
   },
   "footer": {
+    "cta_title": "¿Listo para lanzar tu programa de tarjeta?",
+    "cta_button": "Hablar con el equipo →",
     "tagline": "Infraestructura de tarjetas para la economía de stablecoins. LATAM-first.",
-    "copyright": "© 2026 Zelt Inc. Todos los derechos reservados. Registrado en Delaware.",
-    "disclaimer": "MSB registrado en FinCEN · Solicitante IFE (OCIF)",
+    "copyright": "© 2026 Zelt. Todos los derechos reservados.",
+    "disclaimer": "",
     "sections": {
       "product": "Producto",
       "company": "Empresa",
@@ -326,7 +298,6 @@
     "links": {
       "howItWorks": "Cómo Funciona",
       "features": "Características",
-      "ramp": "Ramp",
       "apiDocs": "Documentación API",
       "pricing": "Precios",
       "about": "Acerca de",
@@ -335,9 +306,7 @@
       "press": "Prensa",
       "contact": "Contacto",
       "privacy": "Política de Privacidad",
-      "terms": "Términos de Servicio",
-      "aml": "Política AML",
-      "cookie": "Política de Cookies"
+      "terms": "Términos de Uso"
     }
   }
 }

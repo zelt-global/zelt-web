@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^4.17.0",
+    "@types/nodemailer": "^8.0.0",
     "framer-motion": "^12.38.0",
     "next": "16.2.3",
     "next-intl": "^4.9.1",
+    "nodemailer": "^8.0.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },

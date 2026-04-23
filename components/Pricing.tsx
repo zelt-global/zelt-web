@@ -14,11 +14,11 @@ export default function Pricing() {
   }>;
 
   return (
-    <section id="pricing" className="py-28">
+    <section id="pricing" className="py-28" >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium mb-3" style={{ color: "#60a5fa" }}>{t("label")}</p>
-          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
+          <p className="section-label mb-4">{t("label")}</p>
+          <h2 className="text-4xl lg:text-5xl font-black tracking-tight">
             {t("title1")}{" "}
             <span className="gradient-text">{t("title2")}</span>
           </h2>
@@ -34,18 +34,18 @@ export default function Pricing() {
                 className="rounded-2xl p-8 flex flex-col"
                 style={
                   highlight
-                    ? { background: "linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(6,182,212,0.12) 100%)", border: "1px solid rgba(59,130,246,0.3)", boxShadow: "0 0 60px rgba(59,130,246,0.12)" }
+                    ? { background: "rgba(37,99,235,0.1)", border: "1px solid rgba(59,130,246,0.3)" }
                     : { background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }
                 }
               >
                 {highlight && (
-                  <div className="text-xs font-semibold px-3 py-1 rounded-full self-start mb-4" style={{ background: "linear-gradient(135deg, #3b82f6, #06b6d4)", color: "#fff" }}>
+                  <div className="text-xs font-semibold px-3 py-1 rounded-full self-start mb-4" style={{ background: "#2563eb", color: "#fff" }}>
                     {t("most_popular")}
                   </div>
                 )}
 
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
+                  <h3 className="text-xl font-black mb-1">{plan.name}</h3>
                   <p className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>{plan.tagline}</p>
                 </div>
 
@@ -81,21 +81,26 @@ export default function Pricing() {
                   className="block text-center py-3.5 rounded-full text-sm font-semibold transition-all duration-200"
                   style={
                     highlight
-                      ? { background: "linear-gradient(135deg, #3b82f6, #06b6d4)", color: "#fff" }
-                      : { background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.8)" }
+                      ? { background: "#2563eb", color: "#fff" }
+                      : { background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.75)" }
                   }
                   onMouseEnter={(e) => {
                     if (highlight) {
-                      (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(59,130,246,0.4)";
-                      (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+                      (e.currentTarget as HTMLElement).style.background = "#1d4ed8";
+                      (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(37,99,235,0.4)";
                     } else {
-                      (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.1)";
+                      (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.25)";
+                      (e.currentTarget as HTMLElement).style.color = "#fff";
                     }
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLElement).style.boxShadow = "";
-                    (e.currentTarget as HTMLElement).style.transform = "";
-                    if (!highlight) (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)";
+                    if (highlight) {
+                      (e.currentTarget as HTMLElement).style.background = "#2563eb";
+                    } else {
+                      (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)";
+                      (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.75)";
+                    }
                   }}
                 >
                   {idx === 2 ? t("cta_contact") : t("cta_start")}

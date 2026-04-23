@@ -35,11 +35,11 @@ export default function Navbar({ isAuthenticated = false }: { isAuthenticated?: 
     setMenuOpen(false);
   };
 
+  const isHome = pathname === "/";
   const navLinks = [
-    { label: t("howItWorks"), href: "#how-it-works" },
-    { label: t("features"), href: "#features" },
-    { label: t("ramp"), href: "#ramp" },
-    { label: t("api"), href: "#api" },
+    { label: t("howItWorks"), href: isHome ? "#how-it-works" : `/${currentLocale}#how-it-works` },
+    { label: t("features"), href: isHome ? "#features" : `/${currentLocale}#features` },
+    { label: t("api"), href: isHome ? "#api" : `/${currentLocale}#api` },
   ];
 
   const currentLang = LOCALES.find((l) => l.code === currentLocale) ?? LOCALES[0];
@@ -55,7 +55,7 @@ export default function Navbar({ isAuthenticated = false }: { isAuthenticated?: 
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href={`/${currentLocale}`} className="flex items-center">
           <Image
             src="/logos/logo-white.png"
             alt="Zelt"
@@ -153,7 +153,7 @@ export default function Navbar({ isAuthenticated = false }: { isAuthenticated?: 
           </a>
 
           <a
-            href="#demo"
+            href={isHome ? "#demo" : `/${currentLocale}#demo`}
             className="text-sm font-semibold px-5 py-2 rounded-full transition-all duration-200"
             style={{ background: "linear-gradient(135deg, #3b82f6, #06b6d4)", color: "#fff" }}
             onMouseEnter={(e) => {
